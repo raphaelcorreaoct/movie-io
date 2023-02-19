@@ -1,0 +1,90 @@
+@import "./styles/cssTokens.scss";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1375px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+body {
+  background: linear-gradient($graniteBlue);
+}
+
+a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $textColor;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    transition: width 0.3s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+      background: $textColor;
+    }
+  }
+}
+
+.logo a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #ffffff;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.base-button {
+  border-radius: 12px;
+  height: 49px;
+  padding: 12px 35px;
+  border: none;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  @extend .flex-center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.link-button {
+  color: $secondaryColor;
+}
+
+.primary-button {
+  background-color: $secondaryColor;
+  color: $textColor;
+}
