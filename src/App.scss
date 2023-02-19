@@ -5,6 +5,8 @@
   padding: 0;
   text-decoration: none;
   margin: 0 auto;
+  color: #ffffff;
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -16,6 +18,7 @@
 
 body {
   background: linear-gradient($graniteBlue);
+  min-height: 100vh;
 }
 
 a {
@@ -86,5 +89,40 @@ a {
 
 .primary-button {
   background-color: $secondaryColor;
-  color: $textColor;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.big-button-base {
+  border: none;
+  padding: 25px 79px;
+  border-radius: 44px;
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  cursor: pointer;
+  @extend .flex-center;
+  svg {
+    fill: $secondaryColor;
+    margin-right: 8px;
+  }
+}
+
+.primary-big-button {
+  background: linear-gradient(166.88deg, #7d96dc 5.05%, #1d4ed8 90.55%);
+  svg {
+    fill: #fff;
+  }
 }
